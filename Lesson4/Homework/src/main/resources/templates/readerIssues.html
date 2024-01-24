@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Книги на руках</title>
+</head>
+<body>
+<h1 th:text="|Имя читателя ${reader.name}, ID читателя ${reader.id}|"></h1>
+<h3>Список всех книг на руках читателя</h3>
+<ul>
+    <li th:each="issue : ${issues}"><span th:text="${issue.bookId}"></span></li>
+</ul>
+
+</body>
+</html>
