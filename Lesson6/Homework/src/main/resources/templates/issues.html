@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Таблица учета аренды книг</title>
+</head>
+<body>
+<table border="1">
+    <tr>
+        <th>Книга</th>
+        <th>Читатель</th>
+        <th>Когда взял</th>
+        <th>Когда вернул</th>
+    </tr>
+    <tr th:each="issue : ${issues}">
+        <td th:text="${issue.bookId}"></td>
+        <td th:text="${issue.readerId}"></td>
+        <td th:text="${issue.issued_at}"></td>
+        <td th:text="${issue.returned_at}"></td>
+    </tr>
+</table>
+
+</body>
+</html>
